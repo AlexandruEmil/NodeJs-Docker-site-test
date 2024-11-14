@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Înregistrare Utilizator</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+        }
+        h2 {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Înregistrare Utilizator</h2>
+        <form id="registrationForm" method="POST" action="/register" enctype="multipart/form-data">
+    	    <div class="form-group">
+        	<label for="profileImage">Imagine de profil:</label>
+        	<input type="file" class="form-control" id="profileImage" name="profileImage" accept="image/*" required>
+    	    </div>
+            <div class="form-group">
+                <label for="username">Nume utilizator:</label>
+                <input type="text" class="form-control" id="username" name="username" required minlength="3" title="Numele utilizatorului trebuie să conțină doar litere, cifre și caractere de subliniere.">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Parolă:</label>
+                <input type="password" class="form-control" id="password" name="password" required minlength="6" maxlength="20" title="Parola trebuie să aibă între 6 și 20 de caractere.">
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirmarea parolei:</label>
+                <input type="password" class="form-control" id="confirmPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="firstName">Nume:</label>
+                <input type="text" class="form-control" id="firstName" name="firstName" required minlength="2" maxlength="30" pattern="^[a-zA-Z]+$" title="Numele trebuie să conțină doar litere.">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Prenume:</label>
+                <input type="text" class="form-control" id="lastName" name="lastName" required minlength="2" maxlength="30" pattern="^[a-zA-Z]+$" title="Prenumele trebuie să conțină doar litere.">
+            </div>
+            <div class="form-group">
+                <label for="displayName">Nume afișat:</label>
+                <input type="text" class="form-control" id="displayName" name="displayName" required minlength="2" maxlength="30">
+            </div>
+            <button type="submit" class="btn btn-primary">Înregistrează-te</button>
+        </form>
+    </div>
+
+    <!-- JavaScript pentru validarea formularului -->
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne trimiterea formularului automat
+
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Verifică dacă parolele coincid
+            if (password !== confirmPassword) {
+                alert('Parolele nu coincid!');
+                return;
+            }
+
+            // Verificare suplimentară pentru validarea email-ului
+            const email = document.getElementById('email').value;
+            const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/; // Simplu pattern pentru email
+            if (!emailPattern.test(email)) {
+                alert('Introduceți o adresă de email validă.');
+                return;
+            }
+
+            // Alte validări personalizate pot fi adăugate aici
+
+            // Dacă toate validările sunt trecute, trimite formularul
+            this.submit();
+        });
+    </script>
+
+    <!-- Bootstrap JS, Popper.js și jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

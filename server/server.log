@@ -1,0 +1,24 @@
+2023-01-18 21:50:12,327 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-01-18 21:50:12,327 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-01-18 21:50:15,732 DEBUG server Thread-1 : mesaj debug
+2023-01-18 21:50:15,734 INFO server Thread-1 : mesaj info
+2023-01-18 21:50:15,734 WARNING server Thread-1 : mesaj warning
+2023-01-18 21:50:15,734 ERROR server Thread-1 : mesaj error
+2023-01-18 21:50:15,734 CRITICAL server Thread-1 : mesaj critical
+2023-01-18 21:50:15,734 INFO werkzeug Thread-1 : 127.0.0.1 - - [18/Jan/2023 21:50:15] "GET /api/data HTTP/1.1" 200 -
+2023-01-18 21:51:32,356 INFO werkzeug Thread-4 : 127.0.0.1 - - [18/Jan/2023 21:51:32] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+2023-01-18 21:57:54,452 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-01-18 21:57:54,452 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-01-18 21:57:58,245 INFO werkzeug Thread-1 : 127.0.0.1 - - [18/Jan/2023 21:57:58] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+2023-01-18 21:58:28,635 INFO werkzeug Thread-2 : 127.0.0.1 - - [18/Jan/2023 21:58:28] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+2023-01-20 18:16:18,917 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-01-20 18:16:18,918 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-01-20 18:16:28,427 INFO werkzeug Thread-1 : 127.0.0.1 - - [20/Jan/2023 18:16:28] "GET / HTTP/1.1" 200 -
+2023-01-20 18:16:28,459 INFO werkzeug Thread-2 : 127.0.0.1 - - [20/Jan/2023 18:16:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-01-20 18:16:50,229 INFO werkzeug Thread-3 : 127.0.0.1 - - [20/Jan/2023 18:16:50] "GET /api/date HTTP/1.1" 200 -
+2023-01-20 19:22:26,946 INFO werkzeug Thread-5 : 127.0.0.1 - - [20/Jan/2023 19:22:26] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+2023-01-20 19:22:45,325 INFO werkzeug Thread-6 : 127.0.0.1 - - [20/Jan/2023 19:22:45] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+2023-01-20 19:22:46,934 INFO werkzeug Thread-7 : 127.0.0.1 - - [20/Jan/2023 19:22:46] "[31m[1mPOST / HTTP/1.1[0m" 405 -
